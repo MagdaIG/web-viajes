@@ -280,6 +280,44 @@
         </button>
     </div>
 </section>
+<section class="py-5">
+    <div class="container">
+        <div class="contact-card mx-auto shadow-lg">
+            <h2 class="text-center mb-4">¡Contátame!</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="name" placeholder="Ingresa tu nombre" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email" placeholder="Ingresa tu email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="country" class="form-label">País</label>
+                    <select class="form-select" id="country" required>
+                        <option selected disabled value="">Selecciona tu país</option>
+                        <option value="italy">Italia</option>
+                        <option value="france">Francia</option>
+                        <option value="japan">Japón</option>
+                        <option value="usa">Estados Unidos</option>
+                        <option value="australia">Australia</option>
+                        <option value="spain">España</option>
+                        <option value="germany">Alemania</option>
+                        <option value="brazil">Brasil</option>
+                        <option value="canada">Canadá</option>
+                        <option value="uk">Reino Unido</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Escribe tu mensaje aquí" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Enviar Mensaje</button>
+            </form>
+        </div>
+    </div>
+</section>
 
 <!-- Footer -->
 <footer class="bg-dark text-white text-center py-4">

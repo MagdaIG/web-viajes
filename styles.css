@@ -442,3 +442,53 @@ body::before {
     font-size: 1.2rem;
 }
 
+/* Estilos para la tarjeta de contacto */
+.contact-card {
+    background-color: rgba(255, 253, 171, 0.31); /* Fondo semitransparente */
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 700px; /* Ancho máximo ajustado */
+    margin: 0 auto; /* Centra la tarjeta */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra elegante */
+    color: #000000;
+    border-bottom: 50px;
+}
+
+/* Estilos para el botón de enviar */
+.contact-card .btn-primary {
+    background-color: rgba(153, 73, 197, 0.68);
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+    color: black;
+}
+
+.contact-card .btn-primary:hover {
+    background-color: rgba(219, 192, 246, 0.99);
+}
+
+/* Estilos para los campos del formulario */
+.contact-card input,
+.contact-card select,
+.contact-card textarea {
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 576px) {
+    .contact-card {
+        max-width: 100%; /* Ajuste en móviles */
+        padding: 20px;
+    }
+
+    .contact-card .btn-primary {
+        font-size: 1rem;
+    }
+}
+
