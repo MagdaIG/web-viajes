@@ -1,0 +1,325 @@
+/* Estilos generales para el body con imagen de fondo */
+body {
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    min-height: 100vh;
+    z-index: 1;
+}
+
+/* Imagen de fondo semitransparente en el body */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/imagen-fondo.png'); /* Reemplaza con la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    opacity: 0.5; /* Opacidad para fondo semitransparente */
+    z-index: -1; /* Mantiene la imagen detrás del contenido */
+}
+
+/* Mantener el header tal como te gustaba */
+.header-section {
+    background-image: url('img/header-imagen1.png'); /* Imagen del header */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 150px 0;
+    position: relative;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.header-section .btn-primary {
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    border: 2px solid #b837d3;
+}
+
+.header-section .btn-primary:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+    font-size: 1.1rem;
+    background-color: rgba(246, 139, 0, 0.86); /* Color de fondo personalizado */
+    color: white; /* Color del texto */
+}
+
+.navbar .navbar-brand, .navbar .navbar-text {
+    color: white; /* Color del texto del logo y del usuario logeado */
+}
+
+.navbar .navbar-brand:hover, .navbar .navbar-text:hover {
+    color: rgba(246, 139, 0, 0.86); /* Color del texto al pasar el ratón (hover) */
+}
+
+/* Estilos para las tarjetas */
+.card {
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente para las tarjetas */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Asegura que todo el contenido se ajuste dentro de la tarjeta */
+    transition: box-shadow 0.3s ease-in-out; /* Efecto de hover suave en la sombra */
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Añade una sombra suave en hover */
+}
+
+/* Estilos para las imágenes dentro de las tarjetas */
+.card-img-top {
+    object-fit: cover;
+    width: 100%;
+    height: auto; /* Deja que la altura se ajuste dinámicamente */
+    aspect-ratio: 1/1; /* Hace que la imagen sea cuadrada */
+    transition: transform 0.3s ease-in-out; /* Efecto de hover suave para la imagen */
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño de la imagen en hover */
+}
+
+/* Estilos para el cuerpo de la tarjeta */
+.card-body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+/* Estilos para el título de la tarjeta */
+.card-title {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #2c3e50;
+}
+
+/* Estilos para el texto dentro de las tarjetas */
+.card-text {
+    color: #7f8c8d;
+}
+
+/* Botón personalizado con ícono de corazón */
+.btn-heart {
+    background-color: #d9534f; /* Color rojo del botón */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-heart i {
+    margin-right: 8px; /* Separación entre el ícono y el texto */
+}
+
+.btn-heart:hover {
+    background-color: #c9302c; /* Color rojo más oscuro en hover */
+    color: white;
+}
+
+/* Estilos para el carrusel de testimonios */
+.testimonios-carousel {
+    position: relative;
+    background-color: rgba(153, 73, 197, 0.68); /* Fondo semitransparente */
+    padding: 2rem;
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.testimonios-carousel .carousel-item {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.testimonios-carousel .carousel-caption {
+    position: static;
+    padding: 1rem;
+}
+
+.testimonios-carousel blockquote {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+.testimonios-carousel footer {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-top: 1rem;
+}
+
+/* Controles del carrusel */
+.testimonios-carousel .carousel-control-prev-icon,
+.testimonios-carousel .carousel-control-next-icon {
+    background-color: #fff; /* Iconos blancos */
+    border-radius: 50%;
+    padding: 0.5rem;
+}
+
+/* Estilos para las secciones del carrusel de imágenes */
+.carousel-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Asegura que el carrusel ocupe toda la pantalla */
+    overflow: hidden;
+}
+
+.carousel-section img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; /* Hace que las imágenes ocupen todo el ancho y alto, manteniendo proporción */
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.carousel-caption h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.carousel-caption .btn-lg {
+    font-size: 1.2rem;
+    padding: 10px 30px;
+    transition: transform 0.3s ease;
+}
+
+.carousel-caption .btn-lg:hover {
+    transform: scale(1.05); /* Efecto hover en el botón */
+}
+
+/* Ajustes del carrusel para pantallas medianas */
+@media (max-width: 992px) {
+    .carousel-section img {
+        height: auto; /* Ajusta la altura de la imagen para pantallas más pequeñas */
+    }
+
+    .carousel-caption h2 {
+        font-size: 2rem; /* Reduce el tamaño del texto en pantallas medianas */
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+
+    .carousel-caption .btn-lg {
+        font-size: 1rem;
+        padding: 8px 20px;
+    }
+}
+
+/* Ajustes del carrusel para pantallas pequeñas */
+@media (max-width: 576px) {
+    .carousel-caption {
+        top: 40%; /* Ajusta la posición vertical */
+        left: 50%;
+        transform: translate(-50%, -40%);
+        padding: 40px; /* Aumenta el padding para hacer la tarjeta más grande */
+        max-width: 90%; /* Limita el ancho máximo de la tarjeta */
+    }
+
+    .carousel-caption h2 {
+        font-size: 2rem; /* Aumenta ligeramente el tamaño del título */
+    }
+
+    .carousel-caption p {
+        font-size: 1.1rem; /* Aumenta el tamaño del texto */
+    }
+
+    .carousel-caption .btn-lg {
+        font-size: 1.2rem; /* Ajusta el tamaño del botón */
+        padding: 10px 30px; /* Aumenta el padding del botón */
+    }
+}
+
+/* Media queries para las tarjetas y secciones responsivas */
+.destinos .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.destinos .col-12 {
+    margin-bottom: 20px;
+}
+
+@media (min-width: 1200px) {
+    .destinos .col-lg-4 {
+        flex: 0 0 33.333%; /* 3 artículos por fila en pantallas grandes */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .destinos .col-md-6 {
+        flex: 0 0 50%; /* 2 artículos por fila en pantallas medianas */
+    }
+}
+
+@media (max-width: 767px) {
+    .destinos .col-12 {
+        flex: 0 0 100%; /* 1 artículo por fila en pantallas pequeñas */
+    }
+}
+
+/* Estilos para la tarjeta semitransparente en la sección de "Una Aventura Única de 1 Semana" */
+.card-semitransparente {
+    background-color: rgba(153, 73, 197, 0.68); /* Fondo semitransparente */
+    border-radius: 10px;
+    color: white;
+    padding: 20px;
+    max-width: 1500px; /* Ajusta el ancho máximo de la tarjeta */
+    margin: 0 auto; /* Centra la tarjeta */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-semitransparente:hover {
+    transform: scale(1.05); /* Efecto de hover para agrandar la tarjeta */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta la sombra en hover */
+}
+
+.card-semitransparente h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.card-semitransparente p {
+    font-size: 1.2rem;
+}
+
