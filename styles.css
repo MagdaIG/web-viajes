@@ -64,12 +64,13 @@ body::before {
 .card {
     border-radius: 20px;
     overflow: hidden;
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente para las tarjetas */
+    background-color: rgba(255, 243, 205, 0.45); /* Fondo blanco semi-transparente para las tarjetas */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%; /* Asegura que todo el contenido se ajuste dentro de la tarjeta */
     transition: box-shadow 0.3s ease-in-out; /* Efecto de hover suave en la sombra */
+    color: black;
 }
 
 .card:hover {
@@ -107,7 +108,7 @@ body::before {
 
 /* Estilos para el texto dentro de las tarjetas */
 .card-text {
-    color: #7f8c8d;
+    color: #000000;
 }
 
 /* Botón personalizado con ícono de corazón */
@@ -129,6 +130,28 @@ body::before {
 
 .btn-heart:hover {
     background-color: #c9302c; /* Color rojo más oscuro en hover */
+    color: white;
+}
+
+/* Botón personalizado con ícono de corazón */
+.btn-hand {
+    background-color: #234a9e; /* Color rojo del botón */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-hand i {
+    margin-right: 8px; /* Separación entre el ícono y el texto */
+}
+
+.btn-hand:hover {
+    background-color: #536ac8; /* Color rojo más oscuro en hover */
     color: white;
 }
 
@@ -245,6 +268,7 @@ body::before {
     }
 }
 
+
 /* Ajustes del carrusel para pantallas pequeñas */
 @media (max-width: 576px) {
     .carousel-caption {
@@ -296,6 +320,101 @@ body::before {
         flex: 0 0 100%; /* 1 artículo por fila en pantallas pequeñas */
     }
 }
+/* Estilos para la sección de transportes */
+/* Estilos para la sección de transportes */
+/* Estilos para la sección de transportes */
+.transportes .card {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-in-out;
+    text-align: justify;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.38);
+}
+
+.transportes .card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajustes para hacer las tarjetas más anchas */
+.transportes .card-img-top {
+    object-fit: cover;
+    width: 100%;
+    height: 350px; /* Reduce la altura fija de las imágenes para que se adapten mejor a la nueva disposición */
+}
+
+/* Responsividad para ver dos tarjetas por fila en pantallas medianas */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .transportes .col-md-6 {
+        flex: 0 0 50%; /* Dos artículos por fila en pantallas medianas */
+        max-width: 50%;
+    }
+}
+
+/* Responsividad para ver las tarjetas en una sola columna en pantallas pequeñas */
+@media (max-width: 767px) {
+    .transportes .col-12 {
+        flex: 0 0 100%; /* Una tarjeta por fila en pantallas pequeñas */
+        max-width: 100%;
+    }
+}
+
+/* Responsividad para ver dos tarjetas en pantallas grandes */
+@media (min-width: 1200px) {
+    .transportes .col-lg-6 {
+        flex: 0 0 50%; /* Dos artículos por fila en pantallas grandes */
+        max-width: 50%;
+    }
+}
+
+/* Sección de preguntas ¿Cuándo y dónde quieres viajar? */
+.preguntas-viaje .card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+    background-color: rgba(255, 243, 205, 0.45);
+}
+
+.preguntas-viaje .card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.preguntas-viaje .card-img-top {
+    object-fit: cover;
+    width: 100%;
+    height: 300px; /* Altura fija para las imágenes */
+}
+
+.preguntas-viaje .form-control,
+.preguntas-viaje .form-select {
+    max-width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .preguntas-viaje .card {
+        margin-bottom: 20px; /* Espaciado entre tarjetas en pantallas pequeñas */
+    }
+
+    .preguntas-viaje .form-control,
+    .preguntas-viaje .form-select {
+        width: 100%; /* Asegura que el input ocupe todo el ancho en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 576px) {
+    .transportes .card-img-top,
+    .preguntas-viaje .card-img-top {
+        height: 150px; /* Reduce la altura de las imágenes en pantallas más pequeñas */
+    }
+
+    .preguntas-viaje .card {
+        padding: 15px; /* Reduce el padding en pantallas pequeñas */
+    }
+}
+
 
 /* Estilos para la tarjeta semitransparente en la sección de "Una Aventura Única de 1 Semana" */
 .card-semitransparente {
